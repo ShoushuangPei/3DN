@@ -87,7 +87,7 @@ HOSTNAME = socket.gethostname()
 
 TRAIN_DATASET_MESH = data_h5_template.H5Dataset(listfile=TRAIN_LST_MESH, maxnverts=MAX_NVERTS, maxntris=MAX_NTRIS, num_points=NUM_POINTS, batch_size=BATCH_SIZE)
 VALID_DATASET_MESH = data_h5_template.H5Dataset(listfile=VALID_LST_MESH, maxnverts=MAX_NVERTS, maxntris=MAX_NTRIS, num_points=NUM_POINTS, batch_size=BATCH_SIZE)
-
+#加载训练与验证的数据集
 def log_string(out_str):
     LOG_FOUT.write(out_str+'\n')
     LOG_FOUT.flush()
