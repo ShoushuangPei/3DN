@@ -15,7 +15,7 @@ def get_pred_foldenet_basic(src_pc, src_feats, ref_feats, is_training, batch_siz
     ##TODO: Symmetry
 
     globalfeats = tf.concat([src_feats, ref_feats], axis=1)
-
+    #tf.concat 第一维拼接
     globalfeats = tf.reshape(globalfeats, [batch_size, 1, 1, -1])
     globalfeats_expand = tf.tile(globalfeats, [1, src_pc.get_shape()[1], 1, 1])
 
